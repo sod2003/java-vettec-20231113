@@ -19,7 +19,7 @@ public class FindMax {
 		System.out.println("Max of " + Arrays.toString(testArray) + " array: " + findMax(testArray));
 		
 		// Bonus
-		testArray = new int[] {-1, 4, -3, 0};
+		testArray = new int[] {-1, -4, -3, 0};
 		System.out.println("\nMin of " + Arrays.toString(testArray) + " array: " + findMin(testArray));
 	}
 	
@@ -31,6 +31,7 @@ public class FindMax {
 	public static int findMax(int[] array) {
 		int max = 0;
 		if (!(array == null || array.length == 0)) {
+			max = array[0];
 			for (int i = 0; i < array.length; i++) {
 				if (array[i] > max) {
 					max = array[i];
@@ -49,6 +50,7 @@ public class FindMax {
 	public static int findMin(int[] array) {
 		int min = 0;
 		if (!(array == null || array.length == 0)) {
+			min = array[0];
 			for (int i = 0; i < array.length; i++) {
 				if (array[i] < min) {
 					min = array[i];
