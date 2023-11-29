@@ -6,9 +6,11 @@ public class TestCircle {
 		Circle circle1 = new Circle();
 		System.out.println("Making Circle2");
 		Circle circle2 = new Circle(2.3);
-		System.out.format("Is circle1 comparable to circle2? %b\n\n", circle1.compare(circle2));
-		System.out.println("Making Circle3");
-		Circle circle3 = new Circle(2.0);
-		System.out.format("Is circle1 comparable to circle3? %b", circle1.compare(circle3));
+		System.out.format("Is circle1 comparable to circle2? %b\n",
+				circle1.compare(circle2));
+		System.out.println("Changing circle2's radius to 2.0");
+		circle2.setRadius(2.0);
+		System.out.format("Is circle1 comparable to circle2 after the radius "
+				+ "change? %b", circle1.compare(circle2));
 	}
 }

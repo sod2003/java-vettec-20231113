@@ -32,4 +32,8 @@ public class Circle {
 	public boolean compare(Circle circle) {
 		return this.radius == circle.radius;
 	}
+	
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
 }
