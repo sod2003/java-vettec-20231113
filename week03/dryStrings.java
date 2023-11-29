@@ -1,6 +1,6 @@
 package com.skillstorm.strings;
 
-public class dryStrings {
+public class DryStrings {
 
 	public static void main(String[] args) {
 		String[] str = {"This is a series of Strings",
