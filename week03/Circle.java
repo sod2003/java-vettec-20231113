@@ -5,11 +5,9 @@ public class Circle {
 	
 	public Circle() {
 		this.radius = 2.0;
-		print();
 	}
 	public Circle(double radius) {
 		this.radius = radius;
-		print();
 	}
 	
 	public double area() {
