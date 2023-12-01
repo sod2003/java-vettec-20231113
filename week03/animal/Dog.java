@@ -33,7 +33,7 @@ public class Dog extends Animal/* Make Dog inherit from Animal */{
 	}
 	
 	public boolean equals(Dog otherDog) {
-		if (!(this.name == otherDog.name)) {
+		if (!(this.name.equals(otherDog.name))) {
 			return false;
 		}
 		return true;
