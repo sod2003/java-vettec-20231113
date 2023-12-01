@@ -5,19 +5,23 @@ public class Cat extends Animal/* Make Cat inherit from Animal */{
 	boolean isFriendly;
 	/* Override the talk method*/
 	public Cat() {
-		name = "Tom";
-		isAlive = true;
+		super("Tom", true, false);
 		isFriendly = false;
-		isExtinct = false;
 	}
 	
 	public Cat(String name, boolean isAlive, boolean isExtinct, boolean isFriendly) {
-		this.name = name;
-		this.isAlive = isAlive;
-		this.isExtinct = isExtinct;
+		super(name, isAlive, isExtinct);
 		this.isFriendly = isFriendly;
 	}
 	
+	public boolean isFriendly() {
+		return isFriendly;
+	}
+
+	public void setFriendly(boolean isFriendly) {
+		this.isFriendly = isFriendly;
+	}
+
 	public void talk() {
 		System.out.println("Meow");
 	}

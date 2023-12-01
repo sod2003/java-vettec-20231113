@@ -2,9 +2,9 @@ package com.skillstorm.classes.groupwork;
 
 public class Animal {
 	
-	String name;
-	boolean isAlive;
-	boolean isExtinct;
+	private String name;
+	private boolean isAlive;
+	private boolean isExtinct;
 	
 	public Animal() {
 	}
@@ -14,6 +14,37 @@ public class Animal {
 		super();
 		this.name = name;
 		this.isAlive = isAlive;
+		this.isExtinct = isExtinct;
+	}
+
+	
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public boolean isAlive() {
+		return isAlive;
+	}
+
+
+	public void setAlive(boolean isAlive) {
+		this.isAlive = isAlive;
+	}
+
+
+	public boolean isExtinct() {
+		return isExtinct;
+	}
+
+
+	public void setExtinct(boolean isExtinct) {
 		this.isExtinct = isExtinct;
 	}
 

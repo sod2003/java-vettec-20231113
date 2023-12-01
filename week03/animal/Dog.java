@@ -4,28 +4,32 @@ public class Dog extends Animal/* Make Dog inherit from Animal */{
 	
 	/* Add some properties */
 	boolean isGoodBoy;
-	/* Override the talk toString and equals methods*/
 	public Dog() {
-		name = "Spot";
-		isAlive = true;
-		isExtinct = false;
+		super("Spot", true, false);
 		isGoodBoy = true;
 	}
 
 	public Dog(String name, boolean isAlive, boolean isExtinct, boolean isGoodBoy) {
-		this.name = name;
-		this.isAlive = isAlive;
-		this.isExtinct = isExtinct;
+		super(name, isAlive, isExtinct);
 		this.isGoodBoy = isGoodBoy;
 	}
-	
+
+	public boolean isGoodBoy() {
+		return isGoodBoy;
+	}
+
+	public void setGoodBoy(boolean isGoodBoy) {
+		this.isGoodBoy = isGoodBoy;
+	}
+
+	/* Override the talk toString and equals methods*/
 	public void talk() {
 		System.out.println("Arf!");
 	}
 	
 	public String toString() {
-		String str = String.format("This is %s. ", name);
-		if (!isGoodBoy == true) {
+		String str = String.format("This is %s. ", getName());
+		if (!isGoodBoy() == true) {
 			return str + "He's not such a good boy!";
 		}
 		return str + "He's a good boy!";
@@ -33,7 +37,7 @@ public class Dog extends Animal/* Make Dog inherit from Animal */{
 	}
 	
 	public boolean equals(Dog otherDog) {
-		if (!(this.name.equals(otherDog.name))) {
+		if (!(this.getName().equals(otherDog.getName()))) {
 			return false;
 		}
 		return true;
