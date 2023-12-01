@@ -12,7 +12,7 @@ public class ShapeTest {
 		System.out.println(shape);
 		
 		// Creating a Triangle
-		Triangle triangle = new Triangle(3.0, 3.0);
+		Triangle triangle = new Triangle(3.0, 3.0, 3.0);
 		System.out.println(triangle);
 
 	}

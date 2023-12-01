@@ -30,10 +30,14 @@ public class Rectangle extends Shape {
 		return width * length;
 	}
 	
+	public double perimeter() {
+		return 2 * length + 2 * width;
+	}
+	
 	public String toString() {
 		return String.format("This is a Rectangle of %.1f\" x %.1f\", with an "
-				+ "area of %.1f in\u00B2. %s", length, width, area(),
-				super.toString());
+				+ "area of %.1f in\u00B2 and a perimeter of %.1f\". %s", length,
+				width, area(), perimeter(), super.toString());
 	}
 	
 }
