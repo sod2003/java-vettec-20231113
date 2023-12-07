@@ -10,11 +10,7 @@ public class TestEmployees {
 		try {
 			System.out.println(employee.calculatePay());
 			System.out.println(employee2.calculatePay());
-			System.out.println(employee3.calculatePay());
-		} catch (InvalidSalaryException e) {
-			System.out.println(e.getMessage());
-		} catch (InvalidWageException e) {
-			System.out.println(e.getMessage());			
+			System.out.println(employee3.calculatePay());		
 		} catch (InvalidPayException e) {
 			System.out.println(e.getMessage());	
 		}
