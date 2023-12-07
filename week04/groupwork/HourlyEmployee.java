@@ -4,14 +4,14 @@ public class HourlyEmployee extends Employee {
 	// TODO 2 encapsulate and throw exception in the setter
 	private double hoursWorked;
 	private double wage; // per hour
+	private static double MINIMUM_WAGE = 7.25;
 	
 	public HourlyEmployee(double hoursWorked, double wage) {
 		this.hoursWorked = hoursWorked;
 		try {
 			setWage(wage);
 		} catch (InvalidWageException e) {
-			e.getMessage();
-			System.out.println("");
+			System.out.println(e.getMessage());
 		}
 	}
 	
@@ -36,9 +36,10 @@ public class HourlyEmployee extends Employee {
 	// Throw custom exception that checks valid wage
 	// Federal minimum wage is $7.25
 	public void setWage(double wage) throws InvalidWageException {
-		if (wage < 7.25) {
-			System.out.print("Wage too low.");
-			throw new InvalidWageException();
+		if (wage < MINIMUM_WAGE) {
+			this.wage = MINIMUM_WAGE;
+			throw new InvalidWageException("Tried to set wage too low. Setting "
+					+ "to Minimum Wage.");
 		}
 		this.wage = wage;
 	}

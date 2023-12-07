@@ -10,7 +10,7 @@ public class SalaryEmployee extends Employee {
 	// TODO 5 override calculate pay
 	@Override
 	public double calculatePay() {
-		return salary;
+		return salary / 12.0;
 	}
 
 	public double getSalary() {
