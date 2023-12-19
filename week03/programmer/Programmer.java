@@ -1,4 +1,4 @@
-package com.skillstorm.programmer;
+package Week03.programmer;
 
 public class Programmer {
 	private String name;

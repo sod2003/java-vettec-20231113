@@ -1,4 +1,4 @@
-package com.skillstorm.strings;
+package Week03;
 
 public class DryStrings {
 

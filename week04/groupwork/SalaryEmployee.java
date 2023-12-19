@@ -1,4 +1,4 @@
-package com.skillstorm.groupwork;
+package Week04.groupwork;
 
 public class SalaryEmployee extends Employee {
 	// TODO 4 encapsulate (throw custom exception in setter guard clause)

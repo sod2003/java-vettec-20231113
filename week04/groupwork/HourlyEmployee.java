@@ -1,4 +1,4 @@
-package com.skillstorm.groupwork;
+package Week04.groupwork;
 
 public class HourlyEmployee extends Employee {
 	// TODO 2 encapsulate and throw exception in the setter

@@ -1,4 +1,4 @@
-package com.skillstorm.groupwork;
+package Week04.groupwork;
 
 public class InvalidSalaryException extends InvalidPayException {
 	

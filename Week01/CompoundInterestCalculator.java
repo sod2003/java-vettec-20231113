@@ -1,4 +1,4 @@
-package com.skillstorm.calculators;
+package Week01;
 import java.util.Scanner;
 /*
  * Compound Interest Calculator by Sean O'Dowd

@@ -1,4 +1,4 @@
-package com.skillstorm.training;
+package Week01;
 
 public class MakeCow {
 

@@ -1,4 +1,4 @@
-package com.skillstorm.groupwork;
+package Week04.groupwork;
 
 // TODO Add constructors
 public class InvalidPayException extends Exception {

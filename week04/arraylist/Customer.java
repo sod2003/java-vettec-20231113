@@ -1,4 +1,4 @@
-package com.skillstorm.arraylist;
+package Week04.arraylist;
 
 public class Customer {
 	private IceCream iceCream;

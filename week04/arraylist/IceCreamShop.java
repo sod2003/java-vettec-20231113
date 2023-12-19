@@ -1,4 +1,4 @@
-package com.skillstorm.arraylist;
+package Week04.arraylist;
 import java.util.ArrayList;
 
 public class IceCreamShop {

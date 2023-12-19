@@ -1,4 +1,4 @@
-package com.skillstorm.wrapperclasses;
+package Week05.wrapperclasses;
 
 public class TestStudent {
 	

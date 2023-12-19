@@ -1,4 +1,4 @@
-package com.skillstorm;
+package Week01;
 import java.util.Scanner;
 
 /* Dice Roll program by Sean O'Dowd

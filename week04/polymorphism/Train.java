@@ -1,4 +1,4 @@
-package com.skillstorm.polymorphism;
+package Week04.polymorphism;
 
 public class Train implements Vehicle/* TODO 2 make Train a vehicle */ {
 	private String color;

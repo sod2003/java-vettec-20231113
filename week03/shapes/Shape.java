@@ -1,4 +1,4 @@
-package com.skillstorm.shapes;
+package Week03.shapes;
 
 public class Shape {
 	private int sides;

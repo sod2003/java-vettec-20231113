@@ -1,4 +1,4 @@
-package com.skillstorm.polymorphism;
+package Week04.polymorphism;
 
 public class VehicleTests {
 	

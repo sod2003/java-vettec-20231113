@@ -1,4 +1,4 @@
-package com.skillstorm.arrays;
+package Week02;
 
 import java.util.Arrays;
 

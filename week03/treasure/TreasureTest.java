@@ -1,4 +1,4 @@
-package com.skillstorm.classes;
+package Week03.treasure;
 
 public class TreasureTest {
 

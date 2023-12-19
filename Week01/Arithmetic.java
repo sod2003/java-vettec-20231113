@@ -1,4 +1,4 @@
-package com.skillstorm.arithmetic;
+package Week01;
 /* Arithmetic Assignment by Sean O'Dowd
  * 
  * This assignment will show Remainder Operator, Order of Operations, 

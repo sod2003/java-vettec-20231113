@@ -1,4 +1,4 @@
-package com.skillstorm.shapes;
+package Week03.shapes;
 
 public class Triangle extends Shape {
 	private double side1;

@@ -1,4 +1,4 @@
-package com.skillstorm.loops;
+package Week03;
 
 public class ForLoopChallenge {
 

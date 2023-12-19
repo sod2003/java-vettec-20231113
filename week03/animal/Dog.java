@@ -1,4 +1,4 @@
-package com.skillstorm.classes.groupwork;
+package Week03.animal;
 
 public class Dog extends Animal/* Make Dog inherit from Animal */{
 	

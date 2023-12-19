@@ -1,4 +1,4 @@
-package com.skillstorm.wrapperclasses;
+package Week05.wrapperclasses;
 
 import java.util.ArrayList;
 // https://github.com/ericahicks/java-vettec-20231113/blob/main/WrapperClasses/src/com/skillstorm/groupwork/Student.java
