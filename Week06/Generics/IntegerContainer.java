@@ -1,16 +1,14 @@
 package Week06.Generics;
-import java.util.ArrayList;
-import java.util.List;
 
 public class IntegerContainer {
-    ArrayList<Integer> values;
+    int[] values;
 
-    public IntegerContainer(List<Integer> array) {
-        values.addAll(array);
+    public IntegerContainer(int[] array) {
+        values = array;
     }
 
     public void printContainer() {
-        for (Integer number : values) {
+        for (int number : values) {
             System.out.print(number + " ");
         }
     }

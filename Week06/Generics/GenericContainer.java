@@ -1,28 +1,26 @@
 package Week06.Generics;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-public class GenericContainer {
-    ArrayList<Number> values = new ArrayList<>();
+public class GenericContainer<T> {
+    T[] values;
 
-    public GenericContainer(List<? extends Number> array) {
-        values.addAll(array);
+    public GenericContainer(T[] array) {
+        values = array;
     }
 
     public void printContainer() {
-        for (Number number : values) {
+        for (T number : values) {
             System.out.print(number + " ");
         }
+        System.out.println();
     }
 
     public static void main(String[] args) {
-        List<Integer> integers = Arrays.asList(1, 2, 3);
-        GenericContainer integerContainer = new GenericContainer(integers);
+        Integer[] integers = new Integer[]{1, 2, 3};
+        GenericContainer<Integer> integerContainer = new GenericContainer<>(integers);
         integerContainer.printContainer();
-        System.out.println("");
-        List<Double> doubles = Arrays.asList(1.1, 2.5, 3.0);
-        GenericContainer doubleContainer = new GenericContainer(doubles);
+
+        Double[] doubles = new Double[]{1.1, 2.5, 3.0};
+        GenericContainer<Double> doubleContainer = new GenericContainer<>(doubles);
         doubleContainer.printContainer();
     }
 }
