@@ -34,7 +34,7 @@ public class MyStack<T> {
     }
     
     public static void main(String[] args) {
-        MyStack<Integer> ms = new MyStack();
+        MyStack<Integer> ms = new MyStack<Integer>();
         System.out.println("Stack has size " + ms.getSize());
         ms.push(1);
         System.out.println("Stack has size " + ms.getSize());
