@@ -58,5 +58,8 @@ public class MyQueue<T> {
         strings.add("Myself");
         strings.add("and I");
         System.out.println("My strings\n" + strings);
+        System.out.println("Peeking " + strings.peek());
+        System.out.println("Polling " + strings.poll());
+        System.out.println("My strings\n" + strings);
     }
 }
