@@ -1,13 +1,10 @@
 package Week08.HashAndEquals;
 
-import Week04.groupwork.Employee;
-
 public class Driver {
     public static void main(String[] args) {
         Company stateFarm = new Company("State Farm", 7500, "abc10103");
         Company google = new Company("Google", 25000, "abd12123");
         Company google2 = new Company("Google", 25000, "abd12123");
-        Company skillstorm = new Company("Skillstorm", 1500, "abe14143");
 
         Occupation stateFarmSalesman = new Occupation("Salesman", stateFarm, 80000);
         Person matthew = new Person("Matthew", 26, stateFarmSalesman);
