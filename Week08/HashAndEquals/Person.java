@@ -1,14 +1,16 @@
 package Week08.HashAndEquals;
 
 public class Person {
-    String name;
-    String email;
+    private String name;
+    private int age;
+    private Occupation occupation;
 
     Person() {}
 
-    Person(String name, String email) {
+    Person(String name, int age, Occupation occupation) {
         this.name = name;
-        this.email = email;
+        this.age = age;
+        this.occupation = occupation;
     }
 
     public String getName() {
@@ -19,12 +21,20 @@ public class Person {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public int getAge() {
+        return age;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public Occupation getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(Occupation occupation) {
+        this.occupation = occupation;
     }
 
     @Override
@@ -32,7 +42,8 @@ public class Person {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((email == null) ? 0 : email.hashCode());
+        result = prime * result + age;
+        result = prime * result + ((occupation == null) ? 0 : occupation.hashCode());
         return result;
     }
 
@@ -50,16 +61,18 @@ public class Person {
                 return false;
         } else if (!name.equals(other.name))
             return false;
-        if (email == null) {
-            if (other.email != null)
+        if (age != other.age)
+            return false;
+        if (occupation == null) {
+            if (other.occupation != null)
                 return false;
-        } else if (!email.equals(other.email))
+        } else if (!occupation.equals(other.occupation))
             return false;
         return true;
     }
 
     @Override
     public String toString() {
-        return "Person [name=" + name + ", email=" + email + "]";
+        return "Person [name=" + name + ", age=" + age + ", occupation=" + occupation + "]";
     }
 }

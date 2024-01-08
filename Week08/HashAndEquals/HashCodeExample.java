@@ -2,8 +2,10 @@ package Week08.HashAndEquals;
 
 public class HashCodeExample {
     public static void main(String[] args) {
-        Person p = new Person("Bob", "bobby@gmail.com");
-        Person p2 = new Person("Bob", "bobby@email.com");
+        Company company = new Company();
+        Occupation salesman = new Occupation();
+        Person p = new Person("Bob", 65, salesman);
+        Person p2 = new Person("Bob", 65, salesman);
 
         System.out.println(p == p2);
         System.out.println(p.equals(p2));

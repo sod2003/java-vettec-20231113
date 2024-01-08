@@ -1,5 +1,7 @@
 package Week08.HashAndEquals;
 
+import java.util.Objects;
+
 public class Occupation {
     private String jobTitle;
     private Company company;
@@ -57,19 +59,21 @@ public class Occupation {
         if (getClass() != obj.getClass())
             return false;
         Occupation other = (Occupation) obj;
-        if (jobTitle == null) {
-            if (other.jobTitle != null)
-                return false;
-        } else if (!jobTitle.equals(other.jobTitle))
-            return false;
-        if (company == null) {
-            if (other.company != null)
-                return false;
-        } else if (!company.equals(other.company))
-            return false;
-        if (salary != other.salary)
-            return false;
-        return true;
+        return Objects.equals(company, other.company) && Objects.equals(jobTitle, other.jobTitle) && salary == other.salary;
+        
+        // if (jobTitle == null) {
+        //     if (other.jobTitle != null)
+        //         return false;
+        // } else if (!jobTitle.equals(other.jobTitle))
+        //     return false;
+        // if (company == null) {
+        //     if (other.company != null)
+        //         return false;
+        // } else if (!company.equals(other.company))
+        //     return false;
+        // if (salary != other.salary)
+        //     return false;
+        // return true;
     }
 
     @Override
