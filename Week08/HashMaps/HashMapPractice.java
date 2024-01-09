@@ -8,5 +8,9 @@ public class HashMapPractice {
         dictionary.put("precision", "accuracy; exactness: ");
         dictionary.put("faultless", "without fault, flaw, or defect; perfect.");
         System.out.println(dictionary);
+        
+        dictionary.put(null, null);
+        dictionary.replace(null, "Not Specified");
+        System.out.println(dictionary.get(null));
     }
 }
