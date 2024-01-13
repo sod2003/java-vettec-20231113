@@ -1,0 +1,3 @@
+1. Q6, I didn't realize that that the interface variable would be called. This was a total gotcha, as these questions tend to be.
+2. Q28 was a lucky guess, as I was uncertain about the last one. I used the process of elimination to guess that new Boolean("true") == Boolean.TRUE would yield false vs. the other options.
+3. https://youtu.be/_naRsroUxnQ - The videos added to the OCA practice exams' explanations are quality.
