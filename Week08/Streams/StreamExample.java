@@ -40,5 +40,8 @@ public class StreamExample {
             .stream()
             .reduce(Integer.MIN_VALUE, Math::max);
         System.out.println(maxOfNumbers);
+        
+        int max2 = numbers.stream().max(Integer::compare).get();
+        System.out.println(max2);
     }
 }
