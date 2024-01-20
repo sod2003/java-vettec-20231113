@@ -1,11 +1,12 @@
 package Week09.Algorithms.groupwork;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -45,29 +46,71 @@ public class Appointment {
 	// Given two a list of appointments (one for each person)
 	// Give me a list of possible meeting times
 	static class SchedulingAssistant {
-		public static List<Appointment> getListOfOpenAppointments(List<Appointment> a1, List<Appointment> a2) {
-            List<Appointment> appointments = new ArrayList<Appointment>();
-            List<LocalTime> eligibleTimes = filledAppointmentList();
-            List<LocalTime> zt1 = a1.stream().map(appointment -> appointment.getStart().toLocalTime()).collect(Collectors.toList());
-            List<LocalTime> zt2 = a2.stream().map(appointment -> appointment.getStart().toLocalTime()).collect(Collectors.toList());
-            appointments = eligibleTimes.stream().filter(time -> {
-               return ((zt1.contains(time)) && (zt2.contains(time)));
-            })
-            .map(time -> ZonedDateTime.of(a1.get(0).getStart().toLocalDate(), time, a1.get(0).getStart().getZone()))
-            .map(zonedTime -> new Appointment(zonedTime, Duration.ofMinutes(30)))
-            .collect(Collectors.toList());
-            return appointments;
-        }
+        static List<Appointment> possible = new ArrayList<>();
+        static {
+			LocalDate today = LocalDate.now();
+			Duration d = Duration.ofHours(1);
+			LocalTime timeRef = LocalTime.of(8, 0);
+			ZoneId here = ZoneId.systemDefault();
+			ZonedDateTime start = ZonedDateTime.of(today.atTime(timeRef), here);
+			for (int t = 9; t < 18; t++) { // 8am to 5pm
+				start = start.plus(d);
+				if (t == 12) {
+					continue;
+				}
+				possible.add(new Appointment(start, d)); // add appt every hour
+			}
+		}
 
-        public static List<LocalTime> filledAppointmentList() {
-            List<LocalTime> times = new LinkedList<LocalTime>();
-            LocalTime timeRef = LocalTime.of(8, 0, 0);
-            LocalTime endTime = LocalTime.of(17, 0, 0);
-            for (;timeRef.isBefore(endTime); timeRef.plusMinutes(30)) {
-                times.add(timeRef);
-            }
-            return times;
+		public static List<Appointment> getListOfOpenAppointments(List<Appointment> a1, List<Appointment> a2) {
+            List<Appointment> appointments = possible.stream().collect(Collectors.toList());
+            a1.stream().forEach(appointment -> appointments.remove(appointment));
+            a2.stream().forEach(appointment -> appointments.remove(appointment));
+            return appointments;
         }
 	}
 
+    @Override
+	public String toString() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("EEE MMMM d 'at' h:mm a z");
+		return duration.toMinutes() + "min appointment on " + start.format(dtf);
+	}
+
+    @Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((duration == null) ? 0 : duration.hashCode());
+		result = prime * result + ((start == null) ? 0 : start.hashCode());
+		return result;
+	}
+
+    @Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Appointment other = (Appointment) obj;
+		if (duration == null) {
+			if (other.duration != null) {
+				return false;
+			}
+		} else if (!duration.equals(other.duration)) {
+			return false;
+		}
+		if (start == null) {
+			if (other.start != null) {
+				return false;
+			}
+		} else if (!start.equals(other.start)) {
+			return false;
+		}
+		return true;
+	}
 }
