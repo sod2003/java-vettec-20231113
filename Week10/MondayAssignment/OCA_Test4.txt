@@ -1,0 +1,3 @@
+1. Q22, I'm still getting the exception types mixed up. I answered to add throws IOException on the constructor, and not on the main method which was the correct answer.
+2. Q34, I guessed that the return in the finally block would supercede the return in the catch block, and I got lucky on this hunch.
+3. Reason # 42 why StackOverFlow is a great website: https://stackoverflow.com/questions/65035/does-a-finally-block-always-get-executed-in-java
