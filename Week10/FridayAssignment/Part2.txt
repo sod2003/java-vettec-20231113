@@ -1,0 +1,3 @@
+1. Q8. I smugly answered this one rather quickly, and thought I had an easy one. Turns out that I confused the rules of overriding, not knowing the two different primative types would make this not compile. 
+2. Q52 was giving me pause, and my gut told me to answer Wow.wow and move on before I ran out of time. Turns out that it was right, due to it being the inherited method. The interface method can't be accessed the same way, so I made a good choice.
+3. https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html
