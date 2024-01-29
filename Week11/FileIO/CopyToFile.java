@@ -10,14 +10,14 @@ public class CopyToFile {
 
     public static void main(String[] args) {
         try (BufferedWriter bw = new BufferedWriter( new FileWriter(path + "copy.txt"))) {
-            BufferedReader br = new BufferedReader(new FileReader(path + "hello.txt"));
+            BufferedReader br = new BufferedReader(new FileReader(path + "names.txt"));
                 String str;
             while ((str = br.readLine()) != null) {
                 bw.write(str);
                 bw.newLine();
             }
             br.close();
-            bw.write("Done.");
+            bw.write("Done copying names.");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
