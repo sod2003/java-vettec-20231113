@@ -1,0 +1,3 @@
+1. Q5 is for sure a tough one. I didn't think that was legit.
+2. Q3 is something I think I haven't seen before, where knowing the preference order from widening > boing-unboxing > var-args is important to getting this right. I had a gut feeling that this was a trick question, and answered according to the thought that var-args probably isn't the preferred answer.
+3. https://youtu.be/Ztd_TucXgzg is the video that's listed in the Explanation for Q3.
