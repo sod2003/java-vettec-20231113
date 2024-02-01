@@ -22,10 +22,13 @@ public class ForkJoinFibonacci extends RecursiveTask<Integer> {
     public static void main(String[] args) {
         ForkJoinFibonacci fib = new ForkJoinFibonacci(25);
 
-        ForkJoinPool pool = new ForkJoinPool();
+        ForkJoinPool pool = ForkJoinPool.commonPool();
 
         int fibonacci = pool.invoke(fib);
 
         System.out.println("The fibonacci number returned is: " + fibonacci);
+        System.out.println("Total number of active threads after invoking: " + pool.getActiveThreadCount());  
+        System.out.println("The size of the Common Pool is: " + pool.getPoolSize());
+        System.out.println("The number of incidents of stolen work: " + pool.getStealCount());
     }
 }

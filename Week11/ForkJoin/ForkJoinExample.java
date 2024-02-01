@@ -52,10 +52,9 @@ public class ForkJoinExample {
         // Submitting the task to the ForkJoinPool
         int frequency = pool.invoke(workTask);
 
-        System.out.println("Total number of active threads after invoking: " + pool.getActiveThreadCount());  
-  
-        System.out.println("The size of the Common Pool is: " + pool.getPoolSize());
-
         System.out.println("The number " + searchElement + " is found " + frequency + " times.");
+        System.out.println("Total number of active threads after invoking: " + pool.getActiveThreadCount());  
+        System.out.println("The size of the Common Pool is: " + pool.getPoolSize());
+        System.out.println("The number of incidents of stolen work: " + pool.getStealCount());
     }
 }
