@@ -2,6 +2,7 @@ package Week04.polymorphism;
 
 public class Person {
 	
+	@SuppressWarnings("unused")
 	private String name;
 	private Vehicle vehicle;
 	

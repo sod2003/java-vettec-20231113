@@ -7,10 +7,10 @@ public class LegacyDates {
         Date today = new Date();
         System.out.println(today);
         
-        Date tomorrow = new Date(2024, 1, 17);
-        System.out.println(tomorrow);
+        // Date tomorrow = new Date(2024, 1, 17);
+        // System.out.println(tomorrow);
         
-        Date correctTomorrow = new Date(124, 0, 17);
-        System.out.println(correctTomorrow);
+        // Date correctTomorrow = new Date(124, 0, 17);
+        // System.out.println(correctTomorrow);
     }
 }

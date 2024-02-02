@@ -29,6 +29,7 @@ public class VehicleTests {
 	}
 	
 	/* Test 4: IS-A vehicle*/
+	@SuppressWarnings("unused")
 	public static void test4() {
 		Vehicle vehicle1 = new Car();
 		Vehicle vehicle2 = new Train();
