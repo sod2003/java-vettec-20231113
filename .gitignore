@@ -23,3 +23,7 @@
 hs_err_pid*
 replay_pid*
 .vscode/settings.json
+Week12/FridayJDBCAssignment/demo/pom.xml
+Week12/FridayJDBCAssignment/demo/.editorconfig
+Week12/FridayJDBCAssignment/demo/target/classes/com/skillstorm/resources/db.properties
+Week12/FridayJDBCAssignment/demo/src/main/java/com/skillstorm/resources/db.properties

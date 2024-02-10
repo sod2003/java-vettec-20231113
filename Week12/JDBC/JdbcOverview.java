@@ -21,7 +21,6 @@ public class JdbcOverview {
         String url = "jdbc:mysql://localhost:3306/bank";
         String username = "root";
         String password = "***";
-
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             // Step 3: Create SQL statement
             Statement stmt = conn.createStatement();
