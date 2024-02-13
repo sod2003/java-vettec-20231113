@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 public class JdbcOverview {
@@ -23,11 +22,11 @@ public class JdbcOverview {
         String password = "***";
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
             // Step 3: Create SQL statement
-            Statement stmt = conn.createStatement();
+            // Statement stmt = conn.createStatement();
 
             // Step 4: Run the SQL statement
-            ResultSet rs = stmt.executeQuery("SELECT * FROM account");
-            System.out.println("Done.");
+            // ResultSet rs = stmt.executeQuery("SELECT * FROM account");
+            // System.out.println("Done.");
 
             // Step 5: Process the results
         //     while (rs.next()) {

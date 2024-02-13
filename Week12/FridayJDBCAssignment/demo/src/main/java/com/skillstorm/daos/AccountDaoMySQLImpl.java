@@ -68,7 +68,7 @@ public class AccountDaoMySQLImpl implements AccountDao {
 				if (rs.next()) {
 //						System.out.println("Account Details: ");
 
-					String customer = rs.getString("customer_name");
+					// String customer = rs.getString("customer_name");
 					int id = rs.getInt("id");
 					double balance = rs.getDouble("balance");
 					
