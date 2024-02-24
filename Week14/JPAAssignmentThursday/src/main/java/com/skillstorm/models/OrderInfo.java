@@ -19,7 +19,7 @@ public class OrderInfo {
 	@Id
 	@Column(name="order_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int orderId;
+	private Long orderId;
 	
 	@Column(name="scheduled_time")
 	private LocalDateTime scheduledTime;
@@ -28,11 +28,11 @@ public class OrderInfo {
 	@JoinColumn(name="customer_id")
 	private Customer customer;
 
-	public int getOrderId() {
+	public Long getOrderId() {
 		return orderId;
 	}
 
-	public void setOrderId(int orderId) {
+	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
 

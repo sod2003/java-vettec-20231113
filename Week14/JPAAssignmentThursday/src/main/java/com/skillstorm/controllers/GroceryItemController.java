@@ -28,7 +28,7 @@ public class GroceryItemController {
     }
     
     @GetMapping("/{id}")
-    public GroceryItem findById(@PathVariable int id) {
+    public GroceryItem findById(@PathVariable Long id) {
         return service.findById(id);
     }
     

@@ -18,11 +18,11 @@ public class CustomerService {
         return repo.findAll();
     }
    
-    public Customer findById(int id) {
-        return repo.findById(id);
+    public Customer findById(Long id) {
+        return repo.getReferenceById(id);
     }
    
     public Customer save(Customer customer) {
-        return repo.save(customer.getName(), customer.getAddress());
+        return repo.save(customer);
     }
 }

@@ -18,11 +18,11 @@ public class GroceryItemService {
         return repo.findAll();
     }
 
-    public GroceryItem findById(int id) {
-        return repo.findById(id);
+    public GroceryItem findById(Long id) {
+        return repo.getReferenceById(id);
     }
 
     public GroceryItem save(GroceryItem groceryItem) {
-        return repo.save(groceryItem.getDescription(), groceryItem.getQuantity(), groceryItem.getOrder().getOrderId());
+        return repo.save(groceryItem);
     }
 }

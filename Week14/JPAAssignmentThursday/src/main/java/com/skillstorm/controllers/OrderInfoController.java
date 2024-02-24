@@ -28,7 +28,7 @@ public class OrderInfoController {
     }
     
     @GetMapping("/{id}")
-    public OrderInfo findById(@PathVariable int id) {
+    public OrderInfo findById(@PathVariable Long id) {
         return service.findById(id);
     }
     

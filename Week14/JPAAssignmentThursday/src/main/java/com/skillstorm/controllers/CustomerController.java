@@ -29,7 +29,7 @@ public class CustomerController {
     }
     
     @GetMapping("/{id}")
-    public Customer findById(@PathVariable int id) {
+    public Customer findById(@PathVariable Long id) {
         return service.findById(id);
     }
     

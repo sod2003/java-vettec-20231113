@@ -18,11 +18,11 @@ public class OrderInfoService {
         return repo.findAll();
     }
    
-    public OrderInfo findById(int id) {
-        return repo.findById(id);
+    public OrderInfo findById(Long id) {
+        return repo.getReferenceById(id);
     }
    
     public OrderInfo save(OrderInfo orderInfo) {
-        return repo.save(orderInfo.getScheduledTime(), orderInfo.getCustomer().getCustomerId());
+        return repo.save(orderInfo);
     }
 }

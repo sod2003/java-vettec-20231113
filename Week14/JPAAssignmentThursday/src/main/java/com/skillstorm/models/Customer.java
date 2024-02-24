@@ -19,7 +19,7 @@ public class Customer {
 	@Id
 	@Column(name="customer_id")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int customerId;
+	private Long customerId;
 	
 	@Column(name="name")
 	private String name;
@@ -30,11 +30,21 @@ public class Customer {
 	@OneToMany(mappedBy="customer", fetch = FetchType.LAZY)
 	private List<OrderInfo> orders;
 
-	public int getCustomerId() {
+	public Customer() {
+	}
+
+	public Customer(Long customerId, String name, String address, List<OrderInfo> orders) {
+		this.customerId = customerId;
+		this.name = name;
+		this.address = address;
+		this.orders = orders;
+	}
+
+	public Long getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
