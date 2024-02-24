@@ -24,7 +24,7 @@ public class GroceryItem {
 	private int quantity;
 	
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(name="order_id")
 	private OrderInfo order;
 
 	public int getGroceryId() {

@@ -18,14 +18,14 @@ public class OrderInfo {
 
 	@Id
 	@Column(name="order_id")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int orderId;
 	
 	@Column(name="scheduled_time")
 	private LocalDateTime scheduledTime;
 	
 	@ManyToOne
-	@JoinColumn(name="customer")
+	@JoinColumn(name="customer_id")
 	private Customer customer;
 
 	public int getOrderId() {
