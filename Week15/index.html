@@ -5,8 +5,73 @@
         <meta name="viewport" content="width=device-width", initial-scale="1.0">
         <meta name="keywords" content="html,learn to code, css, javascript">
         <title>Document</title>
+        <style>
+            table {
+                border: solid black 1px
+            }
+            td {
+                border: solid black 1px
+            }
+        </style>
     </head>
     <body>
+        <!--Headers-->
+        <h1>Learning about HTML</h1>
+        <h2>Week 15</h2>
+        <h3>Day 1</h3>
+        <h4>Java VETTEC 202311</h4>
+        <h5>Author: Sean O'Dowd</h5>
+        <h6>Last Updated: Feb 26, 2024</h6>
         <div>Hello World!</div><p>This is pretty neat!</p>
+
+        <!--Lists-->
+        <p>Foods I like:
+            <ul>
+                <li>Pizza</li>
+                <li>Chicken Wings</li>
+                <li>Egg and cheese sandwiches</li>
+            </ul>
+        </p>
+
+        <p>Technologies I feel confident in, Ranked:
+            <ol>
+                <li>HTML</li>
+                <li>Java</li>
+                <li>Javascript</li>
+                <li>Mainframe</li>
+            </ol>
+        </p>
+
+        <!--Tables-->
+        <table>
+            <thead>
+                <tr><th>Header 1</th><th>Header 2</th></tr>
+            </thead>
+            <tr><td>Row 1, Cell 1</td><td>Row 1, Cell 2</td></tr>
+            <tr><td>Row 2, Cell 1</td><td>Row 2, Cell 2</td></tr>
+            <tr><td colspan="2">Spanned Column</td></tr>
+        </table>
+
+        <!--Forms-->
+        <p>Forms are cool</p>
+        <form action="#", method="get">
+            <div>
+                <label for="full-name">Name: </label>
+                <input id="full-name", name="full-name", type="text", placeholder="Pretty Cool Dude">
+            </div>
+            <div>
+                <label for="age">Age: </label>
+                <input id="age", name="age", type="number", max="115", min="0">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email", name="email", type="email">
+            </div>
+            <div>
+                <input type="submit">
+                <!-- <button>Reset</button> -->
+                <input type="reset">
+            </div>
+        </form>
     </body>
 </html>
