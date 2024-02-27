@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="html,learn to code, css, javascript">
         <title>Document</title>
         <style>
@@ -54,19 +54,34 @@
 
         <!--Forms-->
         <p>Forms are cool</p>
-        <form action="#", method="get">
+        <form action="" method="get">
             <div>
                 <label for="full-name">Name: </label>
-                <input id="full-name", name="full-name", type="text", placeholder="Pretty Cool Dude">
+                <input id="full-name" name="full-name" type="text" placeholder="Pretty Cool Dude">
             </div>
             <div>
                 <label for="age">Age: </label>
-                <input id="age", name="age", type="number", max="115", min="0">
+                <input id="age" name="age" type="number" max="115" min="0">
             </div>
             <div>
                 <label for="email">Email: </label>
-                <input id="email", name="email", type="email">
+                <input id="email" name="email" type="email">
             </div>
+            <fieldset>
+                <legend>Favorite Animal</legend>
+                <div>
+                    <label for="animal">Dog</label>
+                    <input id="animal" name="dog" type="radio">
+                </div>
+                <div>
+                    <label for="animal">Cat</label>
+                    <input id="animal" name="cat" type="radio">
+                </div>
+                <div>
+                    <label for="animal">Turtle</label>
+                    <input id="animal" name="turtle" type="radio">
+                </div>
+            </fieldset>
             <div>
                 <input type="submit">
                 <!-- <button>Reset</button> -->
