@@ -1,0 +1,47 @@
+h1, h2 {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+table {
+    border: solid black 2px;
+    margin: 1%
+}
+td {
+    border: solid black 1px;
+    text-align: center;
+    width: 125px;
+}
+input {
+    margin: 1%;
+}
+input:hover {
+    background-color: #70aeec;
+}
+label {
+    font-size: larger;
+}
+body {
+    background-color: #e7e1da;
+}
+tbody tr:nth-child(odd) {
+    background-color: rgb(166, 238, 238);
+}
+#buttons input{
+    margin: 10px 0px;
+    padding: 1% 2%;
+    font-size: large;
+}
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+img {
+    width: 50%;
+}
+
+form {
+    float: left;
+    width: 50%;  
+}
