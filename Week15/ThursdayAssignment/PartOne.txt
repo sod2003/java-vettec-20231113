@@ -1,0 +1,6 @@
+1. Which coding style suggestion do you want to use (or avoid)?
+All of these coding suggestions should be avoided. I can see where each one can
+make the life of a maintainer more difficult. It's better to be clear with the meaning
+and definitions of variables and methods than to have them be confusing. It's also
+important that variables are distinct and hold data that you'd expect from the name.
+The same for methods, they should do what you'd expect from the name.
