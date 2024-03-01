@@ -1,0 +1,12 @@
+.box {
+    width: 200px;
+    height: 200px;
+}
+.blue-sky {
+    background-image: radial-gradient(circle, yellow, white, lightblue);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
