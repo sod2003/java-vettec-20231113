@@ -22,14 +22,12 @@ export class BackendService {
       letter = "g"
     }
 
-    this.http.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" + letter, { observe: 'response'})
+    this.http.get<any>("https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" + letter, { observe: 'response'})
       .subscribe(data => {
 
         this.cocktailsRaw = [];
 
-        let temp: any = data.body;
-
-        for (let cocktail of temp['drinks']) {
+        for (let cocktail of data.body.drinks) {
           this.cocktailsRaw.push(cocktail);
         }
 
