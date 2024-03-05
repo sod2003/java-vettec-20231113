@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Cocktail } from '../models/cocktail';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendService {
 
-  cocktailsRaw: any[] = [];
+  cocktailsRaw: Cocktail[] = [];
 
-  cocktailsByLetterSubject = new BehaviorSubject<any[]>([]);
+  cocktailsByLetterSubject = new BehaviorSubject<Cocktail[]>([]);
 
   cocktailsByLetter = this.cocktailsByLetterSubject.asObservable();
 
@@ -28,7 +29,17 @@ export class BackendService {
         this.cocktailsRaw = [];
 
         for (let cocktail of data.body.drinks) {
-          this.cocktailsRaw.push(cocktail);
+          this.cocktailsRaw.push(new Cocktail(
+            cocktail.idDrink,
+            cocktail.strDrink,
+            cocktail.strAlcoholic, 
+            cocktail.strDrinkThumb, 
+            cocktail.strGlass, 
+            cocktail.strIngredient1, 
+            cocktail.strIngredient2, 
+            cocktail.strIngredient3, 
+            cocktail.strIngredient4, 
+            cocktail.strInstructions));
         }
 
         this.cocktailsByLetterSubject.next(this.cocktailsRaw);

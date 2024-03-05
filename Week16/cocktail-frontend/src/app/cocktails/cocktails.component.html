@@ -1,1 +1,34 @@
-<p>List of all Cocktails!</p>
+<h2>List of all Cocktails! <button (click)="viewToggle()">Toggle View</button></h2>
+
+<!-- {{}} is property binding, taking TS values and using them -->
+<!-- <p>5th Cocktail's Name = {{ cocktails[4].strDrink }}</p>
+
+<img [src]="cocktails[4].strDrinkThumb" [alt]="cocktails[4].strDrink"> -->
+@if (isTable) {
+    <table>
+        <thead>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Glass</th>
+            <th>Category</th>
+            <th>Remove</th>
+        </thead>
+
+        <tbody>
+            @for (cocktail of cocktails; track cocktail) {
+                <tr>
+                    <td><img [src]="cocktail.strDrinkThumb" [alt]="cocktail.strDrink"></td>
+                    <td>{{ cocktail.strDrink }}</td>
+                    <td>{{ cocktail.strGlass }}</td>
+                    <td>{{ cocktail.strAlcoholic }}</td>
+                    <td><button (click)="removeCocktailTable(cocktail.idDrink)">X</button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@for (cocktail of cocktails; track cocktail; let i = $index) {
+    <!-- @if(i === 2) { -->
+        <app-cocktail [cocktail]="cocktail" (deleteCocktailEvent)="removeCocktailGrid($event, i)"></app-cocktail>
+    <!-- } -->
+}
