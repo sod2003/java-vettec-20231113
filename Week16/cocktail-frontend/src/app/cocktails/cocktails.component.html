@@ -1,10 +1,19 @@
 <h2>List of all Cocktails! <button (click)="viewToggle()">Toggle View</button></h2>
 
+<form>
+    <label for="searchLetter">Search for cocktails starting with: </label>
+    <input [(ngModel)]="searchLetter" type="text" id="searchLetter" name="searchLetter" >
+    <button type="submit" (click)="updateLetter()">SUBMIT</button>
+</form>
+
 <!-- {{}} is property binding, taking TS values and using them -->
 <!-- <p>5th Cocktail's Name = {{ cocktails[4].strDrink }}</p>
 
 <img [src]="cocktails[4].strDrinkThumb" [alt]="cocktails[4].strDrink"> -->
 @if (isTable) {
+
+    <h4>Click on an image to get details!</h4>
+
     <table>
         <thead>
             <th>Image</th>
@@ -17,7 +26,7 @@
         <tbody>
             @for (cocktail of cocktails; track cocktail) {
                 <tr>
-                    <td><img [src]="cocktail.strDrinkThumb" [alt]="cocktail.strDrink"></td>
+                    <td><img (click)="getDetails(cocktail.idDrink)" [src]="cocktail.strDrinkThumb" [alt]="cocktail.strDrink"></td>
                     <td>{{ cocktail.strDrink }}</td>
                     <td>{{ cocktail.strGlass }}</td>
                     <td>{{ cocktail.strAlcoholic }}</td>

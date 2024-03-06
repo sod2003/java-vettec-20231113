@@ -1,0 +1,16 @@
+nav {
+    background-color: black; 
+    text-align: center;
+}
+
+div {
+    color: white;
+    display: inline-block;
+    padding: .8em 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div:hover {
+    background-color: rgb(53, 53, 53);
+}

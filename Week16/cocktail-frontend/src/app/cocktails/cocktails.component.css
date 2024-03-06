@@ -14,3 +14,7 @@ th, td {
 th {
     padding-bottom: 8px;
 }
+
+h4 {
+    font-style: italic;
+}

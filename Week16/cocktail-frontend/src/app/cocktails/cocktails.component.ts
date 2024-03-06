@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { BackendService } from '../services/backend.service';
 import { Cocktail } from '../models/cocktail';
 import { CocktailComponent } from '../cocktail/cocktail.component';
+import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cocktails',
   standalone: true,
-  imports: [CocktailComponent],
+  imports: [CocktailComponent, FormsModule],
   templateUrl: './cocktails.component.html',
   styleUrl: './cocktails.component.css'
 })
@@ -17,7 +19,10 @@ export class CocktailsComponent {
   // local storage
   cocktails: Cocktail[] = [];
 
-  constructor(private backend: BackendService) {
+  // holder
+  searchLetter: string = '';
+
+  constructor(private backend: BackendService, private router: Router) {
 
     this.backend.cocktailsByLetter.subscribe(data => {
       this.cocktails = data;
@@ -40,5 +45,13 @@ export class CocktailsComponent {
   removeCocktailGrid(cocktail: Cocktail, index: number) {
     console.log(cocktail);
     this.cocktails.splice(index, 1);
+  }
+
+  updateLetter() {
+    this.backend.getAllCocktailsByLetter(this.searchLetter);
+  }
+
+  getDetails(idDrink: string) {
+    this.router.navigate(['cocktails/details/' + idDrink]);
   }
 }
