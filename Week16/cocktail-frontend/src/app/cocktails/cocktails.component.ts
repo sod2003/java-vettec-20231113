@@ -54,4 +54,9 @@ export class CocktailsComponent {
   getDetails(idDrink: string) {
     this.router.navigate(['cocktails/details/' + idDrink]);
   }
+
+  random() {
+    this.backend.getRandomCocktail();
+    this.router.navigate(["cocktails/random"]);
+  }
 }

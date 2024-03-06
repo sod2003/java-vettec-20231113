@@ -3,7 +3,7 @@
 <form>
     <label for="searchLetter">Search for cocktails starting with: </label>
     <input [(ngModel)]="searchLetter" type="text" id="searchLetter" name="searchLetter" >
-    <button type="submit" (click)="updateLetter()">SUBMIT</button>
+    <button type="submit" (click)="updateLetter()">SUBMIT</button><button (click)="random()">Surprise me!</button>
 </form>
 
 <!-- {{}} is property binding, taking TS values and using them -->

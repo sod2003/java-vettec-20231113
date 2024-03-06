@@ -11,8 +11,9 @@ export class BackendService {
   cocktailsRaw: Cocktail[] = [];
 
   cocktailsByLetterSubject = new BehaviorSubject<Cocktail[]>([]);
-
   cocktailsByLetter = this.cocktailsByLetterSubject.asObservable();
+  randomCocktailSubject = new BehaviorSubject<Cocktail>(new Cocktail("", "", "", "", "", "", "", "", "", ""));
+  randomCocktail = this.randomCocktailSubject.asObservable();
 
   constructor(private http: HttpClient) {
     this.getAllCocktailsByLetter('g');
@@ -44,5 +45,22 @@ export class BackendService {
 
         this.cocktailsByLetterSubject.next(this.cocktailsRaw);
       });
+  }
+
+  getRandomCocktail() {
+    this.http.get<any>("https://www.thecocktaildb.com/api/json/v1/1/random.php", {observe: 'response'})
+    .subscribe(data => {
+      this.randomCocktailSubject.next(new Cocktail( data.body.drinks[0].idDrink, 
+                                                    data.body.drinks[0].strDrink,
+                                                    data.body.drinks[0].strAlcoholic,
+                                                    data.body.drinks[0].strDrinkThumb,
+                                                    data.body.drinks[0].strGlass,
+                                                    data.body.drinks[0].strIngredient1,
+                                                    data.body.drinks[0].strIngredient2,
+                                                    data.body.drinks[0].strIngredient3,
+                                                    data.body.drinks[0].strIngredient4,
+                                                    data.body.drinks[0].strInstructions)
+        )
+    });
   }
 }
