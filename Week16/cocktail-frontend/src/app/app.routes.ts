@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.component';
 import { RandomComponent } from './random/random.component';
+import { CrudComponent } from './crud/crud.component';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path: 'cocktails/random',
         component: RandomComponent
+    },
+    {
+        path: 'crud',
+        component: CrudComponent
     }
 ];
