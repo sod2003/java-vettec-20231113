@@ -1,1 +1,13 @@
-<p>crud works!</p>
+<h2>CRUD Stuff</h2>
+
+<form [formGroup]="getFormGroup">
+    <h4>Get a Single User</h4>
+    <label for="getId">
+        Enter User ID
+        @if (getId?.invalid && (getId?.touched || getId?.dirty)) {
+            <span>*required!</span>
+        }
+    </label>
+    <input id='getId' name='getId' formControlName="getId" type="text">
+    <button [disabled]="getFormGroup.invalid">SUBMIT</button>
+</form>

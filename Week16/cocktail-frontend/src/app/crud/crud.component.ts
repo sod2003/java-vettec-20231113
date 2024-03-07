@@ -27,7 +27,7 @@ export class CrudComponent {
   }
 
   getFormGroup = this.fb.group({
-    id: ['', Validators.required]
+    getId: ['', Validators.required]
   });
 
   // get single user by ID
@@ -67,5 +67,7 @@ export class CrudComponent {
     });
   }
 
-  
+  get getId() {
+    return this.getFormGroup.get('getId');
+  }
 }
