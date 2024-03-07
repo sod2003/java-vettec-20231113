@@ -11,7 +11,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 })
 export class CrudComponent {
 
-  baseUrl: string = 'https://regres.in/api/users/';
+  baseUrl: string = 'https://reqres.in/api/users/';
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
     this.createUser({
